@@ -16,7 +16,7 @@ function constra_theme_scripts() {
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
 
     // All JS
-	// wp_enqueue_script( 'slider', CONSTRA_ASSETS.'google-map/map.js', array( ), 1.1, true );
+    //wp_enqueue_script( 'harry-google-map', constra_google_maps_url(), array(), '1.0.0', 'all' );
 	wp_enqueue_script( 'bootstrap', CONSTRA_ASSETS.'bootstrap/bootstrap.min.js', array( ), 1.1, true );
 	wp_enqueue_script( 'slick-slider', CONSTRA_ASSETS.'slick/slick.min.js"', array( ), 1.1, true );
 	wp_enqueue_script( 'slick-animation', CONSTRA_ASSETS.'slick/slick-animation.min.js', array( ), 1.1, true );
@@ -32,9 +32,21 @@ function constra_theme_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'constra_theme_scripts' );
 
-/*
 
-  <!-- Google Map API Key-->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU" defer></script>
+/*
+Register Google Maps API
+ *
+function constra_google_maps_url() {
+    $maps_url = '';
+
+    /*
+    Translators: If you need to disable the Google Maps API, translate this to 'off'.
+    *
+    if ( 'off' !== _x( 'on', 'Google Maps API: on or off', 'constra' ) ) {
+        $api_key = 'AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU';
+        $maps_url = 'https://maps.googleapis.com/maps/api/js?key=' . urlencode( $api_key ) . '&defer';
+    }
+    return $maps_url;
+}
 
 */
