@@ -1,5 +1,4 @@
 <?php
-
     // header section
     $header_section_phone_label = get_theme_mod('constra_header_calling_label', 'Call Us');
     $header_section_phone_number = get_theme_mod('constra_header_calling_number', '(+9) 847-291-4353');
@@ -9,7 +8,6 @@
     $header_section_iso_number = get_theme_mod('constra_header_iso_number', 'ISO 9001:2017');
     $header_section_button_text = get_theme_mod('constra_header_button_text', 'Get A Quote');
     $header_section_button_url = get_theme_mod('constra_top_bar_button_url', '#');
-    
 ?>
 
 <!-- Header start -->
