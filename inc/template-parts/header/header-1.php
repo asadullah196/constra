@@ -68,6 +68,7 @@
         </div><!-- Container end -->
     </div>
 
+    <!--/ Navigation menu calling -->
     <?php get_template_part( 'inc/template-parts/header/nav-menu' ); ?>
 </header>
 <!--/ Header end -->
