@@ -207,6 +207,112 @@ function constra_top_bar_social() {
 }
 constra_top_bar_social();
 
+// Constra header section
+function constra_header_section() {
+    new \Kirki\Section(
+        'constra_header_section',
+        [
+            'title'       => esc_html__( 'Header Options', 'constra' ),
+            'description' => esc_html__( 'Control different theme section', 'constra' ),
+            'panel'       => 'constra_theme_options',
+            'priority'    => 160,
+        ]
+    );
+
+    new \Kirki\Field\Image(
+        [
+            'settings' 		=> 'constra_header_logo',
+            'label'    		=> esc_html__( 'Header Logo', 'constra' ),
+			'description' 	=> esc_html__( 'The saved photo will be your logo', 'constra' ),
+            'section'  		=> 'constra_header_section',
+            'default'  		=> get_template_directory_uri() . '/assets/images/logo.png',
+			'priority'    	=> 10,
+        ]
+    );
+
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'constra_header_calling_label',
+            'label'    => esc_html__( 'Phone Label', 'constra' ),
+            'section'  => 'constra_header_section',
+            'default'  => esc_html__( 'Call Us', 'constra' ),
+            'priority' => 10,
+        ]
+    );
+    
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'constra_header_calling_number',
+            'label'    => esc_html__( 'Phone Number', 'constra' ),
+            'section'  => 'constra_header_section',
+            'default'  => esc_html__( '(+9) 847-291-4353', 'constra' ),
+            'priority' => 10,
+        ]
+    );
+        
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'constra_header_email_label',
+            'label'    => esc_html__( 'Email Label', 'constra' ),
+            'section'  => 'constra_header_section',
+            'default'  => esc_html__( 'Email Us', 'constra' ),
+            'priority' => 10,
+        ]
+    );
+    
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'constra_header_email_address',
+            'label'    => esc_html__( 'Email Address', 'constra' ),
+            'section'  => 'constra_header_section',
+            'default'  => esc_html__( 'office@Constra.com', 'constra' ),
+            'priority' => 10,
+        ]
+    );
+    
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'constra_header_iso_label',
+            'label'    => esc_html__( 'ISO Label', 'constra' ),
+            'section'  => 'constra_header_section',
+            'default'  => esc_html__( 'Global Certificate', 'constra' ),
+            'priority' => 10,
+        ]
+    );
+    
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'constra_header_iso_number',
+            'label'    => esc_html__( 'ISO Number', 'constra' ),
+            'section'  => 'constra_header_section',
+            'default'  => esc_html__( 'ISO 9001:2017', 'constra' ),
+            'priority' => 10,
+        ]
+    );
+    
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'constra_header_button_text',
+            'label'    => esc_html__( 'Button Text', 'constra' ),
+            'section'  => 'constra_header_section',
+            'default'  => esc_html__( 'Get A Quote', 'constra' ),
+            'priority' => 10,
+        ]
+    );
+    
+    new \Kirki\Field\URL(
+		[
+			'settings' => 'constra_top_bar_button_url',
+			'label'    => esc_html__( 'Button URL', 'constra' ),
+			'section'  => 'constra_header_section',
+			'default'  => '#',
+			'priority' => 10,
+		]
+	);
+
+}
+constra_header_section();
+
 // Constra theme settings
 function constra_theme_settings() {
     new \Kirki\Section(
