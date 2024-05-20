@@ -1,4 +1,20 @@
 <?php
+/**
+ * Theme functions and definitions.
+ *
+ * This file sets up the theme and provides some helper functions.
+ * You can use it to make your theme more functional and customizable.
+ * Functions and definitions in this file can be used in your theme templates.
+ * A lot of other functional file has been linked in this file.
+ *
+ * @link https://developer.wordpress.org/themes/basics/theme-functions/
+ *
+ * @package Constra
+ * @since 1.0.0
+ */
+
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
 
 // Constra theme support options calling here
 function constra_theme_support(){
@@ -39,4 +55,8 @@ function constra_theme_support(){
 add_action('after_setup_theme','constra_theme_support');
 
 // All the theme script calling
+if( class_exists ( 'Kirki' ) ){
+	include_once('inc/common/kirki.php');
+}
 include_once('inc/common/scripts.php');
+include_once('inc/common/template-functions.php');
