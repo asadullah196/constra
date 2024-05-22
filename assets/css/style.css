@@ -3343,6 +3343,13 @@ label {
   font-weight: 700;
 }
 /*# sourceMappingURL=style.css.map */
+.center-menu {
+  margin-left: auto !important;
+}
+
+.get-quote {
+  margin-left: 30px;
+}
 
 .header-get-a-quote {
     list-style: none;

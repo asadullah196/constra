@@ -20,7 +20,9 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     
-                    <?php constra_primary_menus(); ?>
+                    <div class="center-menu">
+                        <?php constra_primary_menus(); ?>
+                    </div>
 
                     <?php if (!empty($header_section_button_text) && !empty($header_section_button_url)) : ?>
                     <div class="get-quote">
