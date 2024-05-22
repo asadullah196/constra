@@ -39,10 +39,12 @@ function constra_breadcrumb(){
     else {
         $title = get_the_title();
     }
+
+    $breadcrumb_bg = get_theme_mod('constra_header_logo', get_template_directory_uri().'/assets/images/banner/banner1.jpg');
 ?>
 
 <!-- breadcrumb area start -->
-<div id="banner-area" class="banner-area" style="background-image:url(<?php echo get_template_directory_uri(); ?>/assets/images/banner/banner1.jpg)">
+<div id="banner-area" class="banner-area" style="background-image: url('<?php echo esc_url($breadcrumb_bg); ?>'); background-repeat: no-repeat; background-position: center; background-size: cover; position: relative; padding-top: 150px; padding-bottom: 150px; background-color: #1f1f1f;">
     <div class="banner-text">
         <div class="container">
             <div class="row">

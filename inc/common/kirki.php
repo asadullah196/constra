@@ -313,6 +313,32 @@ function constra_header_section() {
 }
 constra_header_section();
 
+// Constra breadcrumb section
+function constra_breadcrumb_section() {
+    new \Kirki\Section(
+        'constra_breadcrumb_section',
+        [
+            'title'       => esc_html__( 'Breadcrumb', 'constra' ),
+            'description' => esc_html__( 'Add breadcrumb background', 'constra' ),
+            'panel'       => 'constra_theme_options',
+            'priority'    => 160,
+        ]
+    );
+
+    new \Kirki\Field\Image(
+        [
+            'settings' 		=> 'constra_header_logo',
+            'label'    		=> esc_html__( 'Header Logo', 'constra' ),
+			'description' 	=> esc_html__( 'The saved photo will be your breadcrumb background', 'constra' ),
+            'section'  		=> 'constra_breadcrumb_section',
+            'default'  		=> get_template_directory_uri() . '/assets/images/banner/banner1.jpg',
+			'priority'    	=> 10,
+        ]
+    );
+
+}
+constra_breadcrumb_section();
+
 // Constra theme copyright
 function constra_theme_copyright_text() {
     new \Kirki\Section(
