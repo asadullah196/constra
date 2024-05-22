@@ -117,11 +117,24 @@ function constra_widgets_init() {
 			'name'          => esc_html__( 'Footer 4 - Bottom Right', 'constra' ),
 			'id'            => 'footer-4',
 			'description'   => esc_html__( 'Add widgets here.', 'constra' ),
-			'before_widget' => '<div id="%1$s" class="footer-widget-area footer-bottom-widget %2$s">',
+			'before_widget' => '<div id="%1$s" class="footer-menu text-center text-md-right %2$s">',
 			'after_widget'  => '</div>',
-            'before_title'  => '<h3 class="widget-title">',
-			'after_title'   => '</h3>',
 		)
 	);
 }
 add_action( 'widgets_init', 'constra_widgets_init' );
+
+// Constra copyright
+function constra_copyright(){
+    $copyright_text = get_theme_mod('constra_copyright','Copyright © 2024, Designed & Developed by Themefisher');
+
+    if( !empty($copyright_text) ) : ?>
+        <div class="copyright-info">
+            <span><?php echo wp_kses_post($copyright_text); ?></span>
+        </div>
+	<?php else : ?>
+        <div class="copyright-info">
+            <span><p>Copyright &copy; Designed &amp; Developed by <a href="https://sapwp.com">Sapwp</a></p></span>
+        </div>
+	<?php endif;	
+}
