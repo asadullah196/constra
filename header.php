@@ -35,4 +35,5 @@
 <body <?php body_class(); ?>>
     <div class="body-inner">
         <?php constra_header(); ?>
-        <?php //constra_breadcrumb(); ?>
+        <?php constra_breadcrumb(); ?>
+        

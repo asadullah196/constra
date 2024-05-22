@@ -2876,11 +2876,6 @@ label {
 
 /* News Listing
 ================================================== */
-.post {
-  border-bottom: 1px solid #dadada;
-  padding: 0 0 30px;
-  margin: 0 0 45px;
-}
 
 .post.last {
   padding-bottom: 0;
