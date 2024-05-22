@@ -1,23 +1,13 @@
-<!--
- // WEBSITE: https://themefisher.com
- // TWITTER: https://twitter.com/themefisher
- // FACEBOOK: https://www.facebook.com/themefisher
- // GITHUB: https://github.com/themefisher/
--->
+<?php
+/**
+ * The template for displaying 404 pages (Not Found)
+ *
+ * This is the template that displays a 404 error page when a page or resource is not found.
+ *
+ * @package constra
+ */
+?>
 
-<!-- 
-THEME: Constra - Construction Html5 Template
-VERSION: 1.0.0
-AUTHOR: Themefisher
-
-HOMEPAGE: https://themefisher.com/products/constra-construction-template/
-DEMO: https://demo.themefisher.com/constra/
-GITHUB: https://github.com/themefisher/Constra-Bootstrap-Construction-Template
-
-WEBSITE: https://themefisher.com
-TWITTER: https://twitter.com/themefisher
-FACEBOOK: https://www.facebook.com/themefisher
--->
 
 <!DOCTYPE html>
 <html lang="en">
