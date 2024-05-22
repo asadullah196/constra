@@ -313,6 +313,31 @@ function constra_header_section() {
 }
 constra_header_section();
 
+// Constra theme copyright
+function constra_theme_copyright_text() {
+    new \Kirki\Section(
+        'constra_theme_copyright_text',
+        [
+            'title'       => esc_html__( 'Copyright Text', 'constra' ),
+            'description' => esc_html__( 'Add copyright text', 'constra' ),
+            'panel'       => 'constra_theme_options',
+            'priority'    => 160,
+        ]
+    );
+
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'constra_copyright_text',
+            'label'    => esc_html__( 'Copyright Message', 'constra' ),
+            'section'  => 'constra_theme_copyright_text',
+            'default'  => esc_html__( 'Copyright &copy; Designed &amp; Developed by <a href="https://sapwp.com">Sapwp</a>', 'constra' ),
+            'priority' => 10,
+        ]
+    );
+
+}
+constra_theme_copyright_text();
+
 // Constra theme settings
 function constra_theme_settings() {
     new \Kirki\Section(
@@ -339,7 +364,8 @@ function constra_theme_settings() {
             ],
         ]
     );
-    
+
+    // Set top info section
     new \Kirki\Field\Checkbox_Switch(
         [
             'settings'    => 'constra_top_bar_switch',
@@ -349,6 +375,21 @@ function constra_theme_settings() {
             'choices'     => [
                 'on'  => esc_html__( 'Show', 'constra' ),
                 'off' => esc_html__( 'Hide', 'constra' ),
+            ],
+        ]
+    );
+
+    // Set footer style
+    new \Kirki\Field\Select(
+        [
+            'settings'    => 'constra_footer_setting',
+            'label'       => esc_html__( 'Footer Style', 'constra' ),
+            'section'     => 'constra_theme_settings',
+            'default'     => 'constra-footer-1',
+            'placeholder' => esc_html__( 'Choose a footer style', 'constra' ),
+            'choices'     => [
+                'constra-footer-1' => esc_html__( 'Style 1 - Footer Three Column', 'constra' ),
+                'constra-footer-2' => esc_html__( 'Style 2 - Footer Two Column', 'constra' ),
             ],
         ]
     );

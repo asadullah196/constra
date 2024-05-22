@@ -19,20 +19,15 @@ function constra_header(){
 
 // Footer template calling
 function constra_footer(){
-    get_template_part( 'inc/template-parts/footer/footer-1' );
-/*
-    $header_default_style = get_theme_mod( 'constra_header_setting', 'constra-header-1' );
 
-    if($header_default_style == 'constra-header-1'){
-        get_template_part( 'inc/template-parts/header/top-bar' );
-        get_template_part( 'inc/template-parts/header/header-1' );
-    }
-    elseif($header_default_style == 'constra-header-2'){
-        get_template_part( 'inc/template-parts/header/top-bar' );
-        get_template_part( 'inc/template-parts/header/header-2' );
-    }
+    $footer_default_style = get_theme_mod( 'constra_footer_setting', 'constra-footer-1' );
 
-    */
+    if($footer_default_style == 'constra-footer-1'){
+        get_template_part( 'inc/template-parts/footer/footer-1' );
+    }
+    elseif($footer_default_style == 'constra-footer-2'){
+        get_template_part( 'inc/template-parts/footer/footer-2' );
+    }
 }
 
 // Constra header section logo
@@ -126,7 +121,7 @@ add_action( 'widgets_init', 'constra_widgets_init' );
 
 // Constra copyright
 function constra_copyright(){
-    $copyright_text = get_theme_mod('constra_copyright','Copyright © 2024, Designed & Developed by Themefisher');
+    $copyright_text = get_theme_mod('constra_copyright_text','Copyright © 2024, Designed & Developed by Themefisher');
 
     if( !empty($copyright_text) ) : ?>
         <div class="copyright-info">
