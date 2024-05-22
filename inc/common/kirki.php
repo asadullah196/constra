@@ -364,6 +364,69 @@ function constra_theme_copyright_text() {
 }
 constra_theme_copyright_text();
 
+// Constra 404 error page
+function constra_error_page() {
+    new \Kirki\Section(
+        'constra_error_page',
+        [
+            'title'       => esc_html__( '404 Page', 'constra' ),
+            'description' => esc_html__( 'Error page settings', 'constra' ),
+            'panel'       => 'constra_theme_options',
+            'priority'    => 160,
+        ]
+    );
+
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'constra_error_page_heading',
+            'label'    => esc_html__( 'Heading', 'constra' ),
+            'section'  => 'constra_error_page',
+            'default'  => esc_html__( '404', 'constra' ),
+            'priority' => 10,
+        ]
+    );
+
+        new \Kirki\Field\Text(
+        [
+            'settings' => 'constra_error_page_sub_heading',
+            'label'    => esc_html__( 'Sub Heading', 'constra' ),
+            'section'  => 'constra_error_page',
+            'default'  => esc_html__( 'OOPS... PAGE NOT FOUND!', 'constra' ),
+            'priority' => 10,
+        ]
+    );
+
+    new \Kirki\Field\Textarea(
+        [
+            'settings'    => 'constra_error_page_description',
+            'label'       => esc_html__( 'Description', 'fintech' ),
+            'section'     => 'constra_error_page',
+            'default'     => esc_html__( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit...', 'fintech' ),
+        ]
+    );
+
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'constra_error_page_button_text',
+            'label'    => esc_html__( 'Button Text', 'constra' ),
+            'section'  => 'constra_error_page',
+            'default'  => esc_html__( 'Back To Home Page', 'constra' ),
+            'priority' => 10,
+        ]
+    );
+    
+    new \Kirki\Field\URL(
+		[
+			'settings' => 'constra_error_page_bar_button_url',
+			'label'    => esc_html__( 'Button URL', 'constra' ),
+			'section'  => 'constra_error_page',
+			'default'  => '#',
+			'priority' => 10,
+		]
+	);
+}
+constra_error_page();
+
 // Constra theme settings
 function constra_theme_settings() {
     new \Kirki\Section(
