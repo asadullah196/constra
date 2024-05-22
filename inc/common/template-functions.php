@@ -6,7 +6,7 @@
 function constra_header(){
 
     get_template_part( 'inc/template-parts/header/top-bar' );
-    get_template_part( 'inc/template-parts/header/header-1' );
+    get_template_part( 'inc/template-parts/header/header-2' );
     
 /*
     $header_default_style = get_theme_mod( 'constra_header_setting', 'constra-header-1' );
@@ -45,7 +45,7 @@ function constra_primary_menus(){
             'theme_location'  => 'primary-menu',
 			'container_class' => 'collapse navbar-collapse', // div class, make it false to avoid div generation
 			'container_id'    => 'navbar-collapse', // div id
-            'menu_class'      => 'nav navbar-nav mr-auto', // Ul class
+            'menu_class'      => 'nav navbar-nav mr-auto ml-auto', // Ul class
             'menu_id'         => '', // ul id
             'fallback_cb'     => 'Constra_Walker_Nav_Menu::fallback',
             'walker'     	  => new Constra_Walker_Nav_Menu,
