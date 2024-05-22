@@ -36,3 +36,20 @@ function constra_header_logo(){
         </a>
 	<?php endif;	
 }
+
+
+// Constra primary menu
+function constra_primary_menus(){
+    wp_nav_menu( 
+        array( 
+            'theme_location'  => 'primary-menu',
+			'container_class' => 'collapse navbar-collapse', // div class, make it false to avoid div generation
+			'container_id'    => 'navbar-collapse', // div id
+            'menu_class'      => 'nav navbar-nav mr-auto', // Ul class
+            'menu_id'         => '', // ul id
+            'fallback_cb'     => 'Constra_Walker_Nav_Menu::fallback',
+            'walker'     	  => new Constra_Walker_Nav_Menu,
+			'depth'           => 4,
+        ) 
+    ); 
+}

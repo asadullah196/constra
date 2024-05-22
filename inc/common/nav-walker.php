@@ -1,6 +1,6 @@
 <?php
 
-class Fintech_Walker_Nav_Menu extends Walker {
+class Constra_Walker_Nav_Menu extends Walker {
 	/**
 	 * What the class handles.
 	 *
@@ -290,7 +290,7 @@ class Fintech_Walker_Nav_Menu extends Walker {
 		$item_output .= $args->link_before . $title . $args->link_after;
 		// if we need extra icon in a tag for drowpdown
 		if($this->has_children){
-			$item_output .= '';
+			$item_output .= ' <i class="fa fa-angle-down"></i>';
 		}
 		$item_output .= '</a>';
 		$item_output .= $args->after;

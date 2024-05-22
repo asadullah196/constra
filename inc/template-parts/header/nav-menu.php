@@ -8,6 +8,9 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 
+                <!-- Contra menu calling -->
+                <?php constra_primary_menus(); ?>
+                <!--
                 <div id="navbar-collapse" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav mr-auto">
                         <li class="nav-item dropdown active">
@@ -73,6 +76,7 @@
                         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                     </ul>
                 </div>
+                -->
                 </nav>
             </div>
             <!--/ Col end -->
