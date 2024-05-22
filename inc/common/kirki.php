@@ -327,8 +327,8 @@ function constra_breadcrumb_section() {
 
     new \Kirki\Field\Image(
         [
-            'settings' 		=> 'constra_header_logo',
-            'label'    		=> esc_html__( 'Header Logo', 'constra' ),
+            'settings' 		=> 'constra_breadcrumb_image',
+            'label'    		=> esc_html__( 'Breadcrumb Background', 'constra' ),
 			'description' 	=> esc_html__( 'The saved photo will be your breadcrumb background', 'constra' ),
             'section'  		=> 'constra_breadcrumb_section',
             'default'  		=> get_template_directory_uri() . '/assets/images/banner/banner1.jpg',

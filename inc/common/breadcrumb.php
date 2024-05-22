@@ -40,7 +40,7 @@ function constra_breadcrumb(){
         $title = get_the_title();
     }
 
-    $breadcrumb_bg = get_theme_mod('constra_header_logo', get_template_directory_uri().'/assets/images/banner/banner1.jpg');
+    $breadcrumb_bg = get_theme_mod('constra_breadcrumb_image', get_template_directory_uri().'/assets/images/banner/banner1.jpg');
 ?>
 
 <!-- breadcrumb area start -->
