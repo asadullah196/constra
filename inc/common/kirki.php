@@ -1,6 +1,6 @@
 <?php 
 
-// C theme options
+// Constra theme options
 new \Kirki\Panel(
     'constra_theme_options',
     [
@@ -325,6 +325,21 @@ function constra_theme_settings() {
         ]
     );
 
+    // Set header style
+    new \Kirki\Field\Select(
+        [
+            'settings'    => 'constra_header_setting',
+            'label'       => esc_html__( 'Header Style', 'constra' ),
+            'section'     => 'constra_theme_settings',
+            'default'     => 'constra-header-1',
+            'placeholder' => esc_html__( 'Choose a header style', 'constra' ),
+            'choices'     => [
+                'constra-header-1' => esc_html__( 'Style 1 - Menu with Info', 'constra' ),
+                'constra-header-2' => esc_html__( 'Style 2 - Only Menu', 'constra' ),
+            ],
+        ]
+    );
+    
     new \Kirki\Field\Checkbox_Switch(
         [
             'settings'    => 'constra_top_bar_switch',
