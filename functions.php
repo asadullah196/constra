@@ -59,4 +59,5 @@ if( class_exists ( 'Kirki' ) ){
 	include_once('inc/common/kirki.php');
 }
 include_once('inc/common/scripts.php');
+include_once('inc/common/nav-walker.php');
 include_once('inc/common/template-functions.php');
