@@ -147,7 +147,12 @@ class Constra_Walker_Nav_Menu extends Walker {
 		
 		// sub-menu ul li ul li
 		if ($depth > 0) {
-			$classes[] = '';
+			$classes[] = 'dropdown-submenu';
+		}
+
+		// Add "active" class to the current menu item
+		if ( in_array('current-menu-item', $classes) ) {
+			$classes[] = 'active';
 		}
 		
 		/**
@@ -240,7 +245,7 @@ class Constra_Walker_Nav_Menu extends Walker {
 		// if there's dropdown then ul li a class
 		if($this->has_children){
 			$atts['class'] = 'nav-link dropdown-toggle';
-			$atts['id'] = 'navbarDropdown';
+			$atts['id'] = '';
 		}
 		
 		// if there's dropdown then ul li ul li a class

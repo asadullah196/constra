@@ -977,16 +977,6 @@ ul.navbar-nav > li > a {
   border-radius: 0;
 }
 
-.dropdown-submenu > a:after {
-  display: block;
-  content: "\f105";
-  font-family: "Font Awesome 5 Free";
-  float: right;
-  margin-top: 0;
-  margin-right: -5px;
-  border: 0;
-}
-
 .dropdown-submenu:hover > a:after {
   border-left-color: #fff;
 }
