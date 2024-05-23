@@ -339,30 +339,35 @@ function constra_breadcrumb_section() {
 }
 constra_breadcrumb_section();
 
-// Constra theme copyright
-function constra_theme_copyright_text() {
+// Blog archive page style
+// Blog single page style
+function constra_blog_single() {
     new \Kirki\Section(
-        'constra_theme_copyright_text',
+        'constra_blog_single',
         [
-            'title'       => esc_html__( 'Copyright Text', 'constra' ),
-            'description' => esc_html__( 'Add copyright text', 'constra' ),
+            'title'       => esc_html__( 'Blog Single', 'constra' ),
+            'description' => esc_html__( 'Set Single Blog Style', 'constra' ),
             'panel'       => 'constra_theme_options',
             'priority'    => 160,
         ]
     );
 
-    new \Kirki\Field\Text(
+    new \Kirki\Field\Number(
         [
-            'settings' => 'constra_copyright_text',
-            'label'    => esc_html__( 'Copyright Message', 'constra' ),
-            'section'  => 'constra_theme_copyright_text',
-            'default'  => esc_html__( 'Copyright &copy; Designed &amp; Developed by <a href="https://sapwp.com">Sapwp</a>', 'constra' ),
-            'priority' => 10,
+            'settings' => 'constra_blog_single_description_words',
+            'label'    => esc_html__( 'Display words', 'constra' ),
+            'section'  => 'constra_blog_single',
+            'default'  => 40,
+            'choices'  => [
+                'min'  => 10,
+                'max'  => 150,
+                'step' => 5,
+            ],
         ]
     );
 
 }
-constra_theme_copyright_text();
+constra_blog_single();
 
 // Constra 404 error page
 function constra_error_page() {
@@ -426,6 +431,31 @@ function constra_error_page() {
 	);
 }
 constra_error_page();
+
+// Constra theme copyright
+function constra_theme_copyright_text() {
+    new \Kirki\Section(
+        'constra_theme_copyright_text',
+        [
+            'title'       => esc_html__( 'Copyright Text', 'constra' ),
+            'description' => esc_html__( 'Add copyright text', 'constra' ),
+            'panel'       => 'constra_theme_options',
+            'priority'    => 160,
+        ]
+    );
+
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'constra_copyright_text',
+            'label'    => esc_html__( 'Copyright Message', 'constra' ),
+            'section'  => 'constra_theme_copyright_text',
+            'default'  => esc_html__( 'Copyright &copy; Designed &amp; Developed by <a href="https://sapwp.com">Sapwp</a>', 'constra' ),
+            'priority' => 10,
+        ]
+    );
+
+}
+constra_theme_copyright_text();
 
 // Constra theme settings
 function constra_theme_settings() {

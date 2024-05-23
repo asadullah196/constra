@@ -1,3 +1,6 @@
+<?php
+    $display_blog_description = get_theme_mod('constra_blog_single_description_words', 50 );
+?>
 <!-- archive post starts -->
 <div class="post">
     <div class="post-media post-image">
@@ -23,9 +26,10 @@
             </h2>
         </div><!-- header end -->
         <div class="entry-content">
-            <p><?php 
+            <p>
+                <?php 
                     $post_content = get_the_content();
-                    $word_limit = 50;
+                    $word_limit = !empty($display_blog_description) ? $display_blog_description : 40;
                     $trimmed_content = wp_trim_words($post_content, $word_limit);
                     echo $trimmed_content;
                 ?>
@@ -37,14 +41,3 @@
     </div><!-- post-body end -->
 </div>
 <!-- archive post end -->
-<!-- Blog pagination starts -->
-<nav class="paging" aria-label="Page navigation example">
-    <ul class="pagination">
-    <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-double-left"></i></a></li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-double-right"></i></a></li>
-    </ul>
-</nav>
-<!-- Blog pagination ends -->
