@@ -6,7 +6,7 @@
     $video_url = get_field('add_url_here');
 ?>
 <!-- archive post starts -->
-<div id="post-<?php the_id(); ?>" <?php post_class('post constra-content-video'); ?>>
+<div id="post-<?php the_id(); ?>" <?php post_class('post constra-content-audio'); ?>>
 
     <div class="post-media post-video">
         <div class="embed-responsive embed-responsive-16by9">
