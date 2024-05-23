@@ -2522,6 +2522,11 @@ img.testimonial-thumb {
   font-size: 58px;
   font-weight: 900;
 }
+
+.banner-title {
+  font-size: 36px !important;
+}
+
 @media (max-width: 767px) {
   .banner-title {
     font-size: 48px;

@@ -50,7 +50,7 @@ function constra_breadcrumb(){
             <div class="row">
                 <div class="col-lg-12">
                     <div class="banner-heading">
-                    <h1 class="banner-title"><?php echo esc_html__($title); ?></h1>
+                    <h1 class="banner-title breadcrumb-title"><?php echo esc_html__($title); ?></h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center">                                                
                             <?php if(function_exists('bcn_display'))
