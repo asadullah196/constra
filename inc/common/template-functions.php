@@ -133,3 +133,19 @@ function constra_copyright(){
         </div>
 	<?php endif;	
 }
+
+// Constra blog navigation 
+function constra_navigation(){
+    $pages = paginate_links( array( 
+        'type' => 'array',
+        'prev_text'    => __('<i class="fas fa-angle-double-left"></i> Prev'),
+        'next_text'    => __('Next <i class="fas fa-angle-double-right"></i>'),
+    ) );
+        if( $pages ) {
+        echo '<nav class="paging" aria-label="Page navigation example"><ul class="pagination">';
+        foreach ( $pages as $page ) {
+            echo "<li>$page</li>";
+        }
+        echo '</ul></nav>';
+    }
+}
