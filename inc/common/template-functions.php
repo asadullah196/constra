@@ -144,8 +144,11 @@ function constra_navigation(){
         if( $pages ) {
         echo '<nav class="paging" aria-label="Page navigation example"><ul class="pagination">';
         foreach ( $pages as $page ) {
-            echo "<li>$page</li>";
+			//$page = str_replace('<a', '<a class="xyz"', $page);
+			
+            echo '<li class="page-item">' . $page . '</li>';
         }
         echo '</ul></nav>';
+		
     }
 }
