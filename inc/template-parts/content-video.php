@@ -6,6 +6,7 @@
     $video_url = get_field('add_url_here');
     $video_url = wp_oembed_get($video_url);
 ?>
+
 <!-- archive post starts -->
 <div id="post-<?php the_id(); ?>" <?php post_class('post constra-content-video'); ?>>
 
