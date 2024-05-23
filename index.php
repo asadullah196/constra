@@ -29,6 +29,8 @@ defined( 'ABSPATH' ) || exit;
           <?php while( have_posts()  ) : the_post(); ?>
             <?php echo get_template_part( 'inc/template-parts/content' , get_post_format() ); ?>
           <?php endwhile; ?>
+        <?php else : ?>
+          <?php echo get_template_part( 'inc/template-parts/content-none' ); ?>
         <?php endif; ?>
         <!-- Blog pagination starts -->
         <nav class="paging" aria-label="Page navigation example">

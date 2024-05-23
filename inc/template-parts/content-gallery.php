@@ -4,19 +4,18 @@
 
     // Video URL
     $video_url = get_field('add_url_here');
-    $video_url = wp_oembed_get($video_url);
 ?>
 <!-- archive post starts -->
-<div id="post-<?php the_id(); ?>" <?php post_class('post constra-content-video'); ?>>
+<div id="post-<?php the_id(); ?>" <?php post_class('post constra-content-gallery'); ?>>
 
-    <?php if (!empty($video_url)) : ?>
     <div class="post-media post-video">
         <div class="embed-responsive embed-responsive-16by9">
             <!-- Change the url -->
-            <?php echo $video_url; ?>
+             <?php if (!empty($video_url)) : ?>
+                <iframe class="embed-responsive-item" src="<?php echo esc_url($video_url); ?>" allowfullscreen></iframe>
+            <?php endif; ?>
         </div>
     </div>
-    <?php endif; ?>
 
     <?php if (empty($video_url) && has_post_thumbnail()) : ?>
         <div class="post-media post-image">
