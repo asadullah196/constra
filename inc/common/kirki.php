@@ -365,6 +365,16 @@ function constra_blog_single() {
             ],
         ]
     );
+        
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'constra_blog_single_button_text',
+            'label'    => esc_html__( 'Full blog button text', 'constra' ),
+            'section'  => 'constra_blog_single',
+            'default'  => esc_html__( 'Continue Reading', 'constra' ),
+            'priority' => 10,
+        ]
+    );
 
 }
 constra_blog_single();

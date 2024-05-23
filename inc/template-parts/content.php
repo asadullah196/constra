@@ -1,26 +1,17 @@
 <?php
     $display_blog_description = get_theme_mod('constra_blog_single_description_words', 50 );
+    $single_blog_button_text = get_theme_mod('constra_blog_single_button_text', 'Read More' );
 ?>
 <!-- archive post starts -->
-<div class="post">
-    <div class="post-media post-image">
-    <?php if( !empty(get_the_post_thumbnail_url() ) ) : ?>
-        <img loading="lazy" src="<?php echo esc_html(get_the_post_thumbnail_url()); ?>" class="img-fluid" alt="post-image">
+<div id="post-<?php the_id(); ?>" <?php post_class('post constra-content-regular'); ?>>
+    <?php if(has_post_thumbnail()) : ?>
+        <div class="post-media post-image">
+            <img loading="lazy" src="<?php echo esc_html(the_post_thumbnail_url()); ?>" class="img-fluid" alt="post-image">
+        </div>
     <?php endif; ?>
-    </div>
     <div class="post-body">
         <div class="entry-header">
-            <div class="post-meta">
-                <span class="post-author">
-                    <i class="far fa-user"></i><a href="#"> Admin</a>
-                </span>
-                <span class="post-cat">
-                    <i class="far fa-folder-open"></i><a href="#"> News</a>
-                </span>
-                <span class="post-meta-date"><i class="far fa-calendar"></i> June 14, 2016</span>
-                <span class="post-comment"><i class="far fa-comment"></i> 03<a href="#"
-                    class="comments-link">Comments</a></span>
-            </div>
+            <?php echo get_template_part('inc/template-parts/blog/post-meta'); ?>  
             <h2 class="entry-title">
                 <a href="<?php the_permalink( ); ?>"><?php the_title(); ?></a>
             </h2>
@@ -36,7 +27,7 @@
             </p>
         </div>
         <div class="post-footer">
-            <a href="news-single.html" class="btn btn-primary">Continue Reading</a>
+            <a href="<?php the_permalink( ); ?>" class="btn btn-primary"><?php echo esc_html__($single_blog_button_text); ?></a>
         </div>
     </div><!-- post-body end -->
 </div>

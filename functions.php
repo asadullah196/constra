@@ -43,9 +43,10 @@ function constra_theme_support(){
     /** post format **/
     add_theme_support( 'post-formats', array( 
             'image',
-            'video',
             'audio',
+            'video',
             'quote',
+            'gallery',
         ) 
     );
 
