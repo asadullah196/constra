@@ -1,14 +1,28 @@
 <?php
     $display_blog_description = get_theme_mod('constra_blog_single_description_words', 50 );
     $single_blog_button_text = get_theme_mod('constra_blog_single_button_text', 'Read More' );
+
+    // Video URL
+    $video_url = get_field('add_video_url_here');
 ?>
 <!-- archive post starts -->
-<div id="post-<?php the_id(); ?>" <?php post_class('post constra-content-image'); ?>>
-    <?php if(has_post_thumbnail()) : ?>
+<div id="post-<?php the_id(); ?>" <?php post_class('post constra-content-video'); ?>>
+
+    <div class="post-media post-video">
+        <div class="embed-responsive embed-responsive-16by9">
+            <!-- Change the url -->
+             <?php if (!empty($video_url)) : ?>
+                <iframe class="embed-responsive-item" src="<?php echo esc_url($video_url); ?>" allowfullscreen></iframe>
+            <?php endif; ?>
+        </div>
+    </div>
+
+    <?php if (empty($video_url) && has_post_thumbnail()) : ?>
         <div class="post-media post-image">
             <img loading="lazy" src="<?php echo esc_html(the_post_thumbnail_url()); ?>" class="img-fluid" alt="post-image">
         </div>
     <?php endif; ?>
+
     <div class="post-body">
         <div class="entry-header">
             <?php echo get_template_part('inc/template-parts/blog/post-meta'); ?>  
