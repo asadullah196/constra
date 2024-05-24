@@ -28,7 +28,7 @@
                 </div>
                 <div class="share-items">
                     <ul class="post-social-icons list-unstyled">
-                        <li class="social-icons-head">Share:</li>
+                        <li class="social-icons-head"><?php echo esc_html__('Share:','constra'); ?></li>
                         <?php constra_social_share(); ?>
                     </ul>
                 </div>
