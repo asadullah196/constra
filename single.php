@@ -32,6 +32,7 @@
             <div class="container">
               <div class="row">
                   <div class="col-md-6">
+                  <?php if(!empty($prev_post)) : ?>
                       <div class="card mb-4">
                           <div class="card-body">
                               <a href="<?php echo get_the_permalink( $prev_post ); ?>">
@@ -40,8 +41,10 @@
                             </a>
                           </div>
                       </div>
+                      <?php endif; ?>
                   </div>
                   <div class="col-md-6">
+                  <?php if(!empty($next_post)) : ?>
                       <div class="card mb-4">
                           <div class="card-body">
                             <a href="<?php echo get_the_permalink( $next_post ); ?>">
@@ -50,6 +53,7 @@
                             </a>
                           </div>
                       </div>
+                      <?php endif; ?>
                   </div>
               </div>
           </div>
