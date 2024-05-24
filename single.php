@@ -21,9 +21,12 @@
       <div class="col-lg-8 mb-5 mb-lg-0">
       <?php if ( have_posts() ) : ?>
         <?php while( have_posts()  ) : the_post(); ?>
-          <?php echo get_template_part( 'inc/template-parts/content' , get_post_format() ); ?>
-        <?php endwhile; ?>
-      <?php endif; ?>
+          <?php echo get_template_part( 'inc/template-parts/content' , get_post_format() );
+          
+          $prev_post = get_previous_post();
+          $next_post = get_next_post();
+
+        ?>
 
         <div class="relates-post">
             <div class="container">
@@ -31,9 +34,9 @@
                   <div class="col-md-6">
                       <div class="card mb-4">
                           <div class="card-body">
-                              <a href="#">
-                                <p class="card-text">Previous blog</p>
-                                <h5 class="card-title"><i class="fas fa-angle-double-left"></i> How To Create An Effective Event Budget</h5>
+                              <a href="<?php echo get_the_permalink( $prev_post ); ?>">
+                                <p class="card-text"><?php echo esc_html__('Previous blog','constra'); ?></p>
+                                <h5 class="card-title"><i class="fas fa-angle-double-left"></i> <?php echo get_the_title($prev_post); ?></h5>
                             </a>
                           </div>
                       </div>
@@ -41,9 +44,9 @@
                   <div class="col-md-6">
                       <div class="card mb-4">
                           <div class="card-body">
-                            <a href="#">
-                                <p class="card-text">Next blog</p>
-                                <h5 class="card-title">Basic SEO Optimization For Restaurant Website <i class="fas fa-angle-double-right"></i> </h5>
+                            <a href="<?php echo get_the_permalink( $next_post ); ?>">
+                                <p class="card-text"><?php echo esc_html__('Next blog','constra'); ?></p>
+                                <h5 class="card-title"><?php echo get_the_title($next_post); ?> <i class="fas fa-angle-double-right"></i> </h5>
                             </a>
                           </div>
                       </div>
@@ -64,6 +67,8 @@
 
           </div>
         </div> <!-- Author box end -->
+        <?php endwhile; ?>
+      <?php endif; ?>
 
         <!-- Post comment start -->
         <div id="comments" class="comments-area">
