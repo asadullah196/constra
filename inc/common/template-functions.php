@@ -152,3 +152,19 @@ function constra_navigation(){
 		
     }
 }
+
+// Constra tags
+function constra_tags(){
+    $post_tags = get_the_tags();
+    if ($post_tags) {
+        foreach ($post_tags as $tag) {
+            ?>
+            <a href="<?php echo get_tag_link($tag); ?>"><?php echo $tag->name; ?></a>
+            <?php
+        }
+    } else {
+        ?>
+        <i>No tags found</i>
+        <?php
+    }
+}
