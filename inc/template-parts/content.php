@@ -29,10 +29,7 @@
                 <div class="share-items">
                     <ul class="post-social-icons list-unstyled">
                         <li class="social-icons-head">Share:</li>
-                        <li><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode(get_permalink()); ?>" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="https://twitter.com/share?url=<?php echo urlencode(get_permalink()); ?>&text=<?php echo urlencode(get_the_title()); ?>" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="https://plus.google.com/share?url=<?php echo urlencode(get_permalink()); ?>" target="_blank"><i class="fab fa-google-plus"></i></a></li>
-                        <li><a href="https://www.linkedin.com/shareArticle?mini=true&url=<?php echo urlencode(get_permalink()); ?>&title=<?php echo urlencode(get_the_title()); ?>" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                        <?php constra_social_share(); ?>
                     </ul>
                 </div>
             </div>

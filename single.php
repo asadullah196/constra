@@ -25,6 +25,33 @@
         <?php endwhile; ?>
       <?php endif; ?>
 
+        <div class="relates-post">
+            <div class="container">
+              <div class="row">
+                  <div class="col-md-6">
+                      <div class="card mb-4">
+                          <div class="card-body">
+                              <a href="#">
+                                <p class="card-text">Previous blog</p>
+                                <h5 class="card-title"><i class="fas fa-angle-double-left"></i> How To Create An Effective Event Budget</h5>
+                            </a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-6">
+                      <div class="card mb-4">
+                          <div class="card-body">
+                            <a href="#">
+                                <p class="card-text">Next blog</p>
+                                <h5 class="card-title">Basic SEO Optimization For Restaurant Website <i class="fas fa-angle-double-right"></i> </h5>
+                            </a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+
         <div class="author-box d-nlock d-sm-flex">
           <div class="author-img mb-4 mb-md-0">
             <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/news/avator1.png" alt="author">
