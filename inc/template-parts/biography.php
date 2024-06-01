@@ -14,7 +14,7 @@
     // Get the author's bio/description
     $author_bio = get_the_author_meta('description');
 
-    // Get info with ACF
+    // Get info with ACF plugin
     $author_designation = get_the_author_meta('author_designation');
     $facebook_url = get_the_author_meta('facebook_url');
     $twitter_url = get_the_author_meta('twitter_url');
