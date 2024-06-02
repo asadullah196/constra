@@ -279,7 +279,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 		 * is being assigned rather than tested in a conditional, effectively rendering it useless.
 		 * This 'hack' prevents this from happening.}}
 		 *
-		 * @see https://github.com/TGMPA/TGM-Plugin-Activation/blob/2.3.6/tgm-plugin-activation/class-tgm-plugin-activation.php#L1593
+		 * @see https://github.com/TGMPA/TGM-Plugin-Activation/blob/2.3.6/tgm-plugin-activation/tgm-plugin-activation.php#L1593
 		 *
 		 * @since 2.5.2
 		 *
