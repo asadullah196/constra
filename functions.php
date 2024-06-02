@@ -60,9 +60,11 @@ if( class_exists ( 'Kirki' ) ){
 	include_once('inc/common/kirki.php');
 }
 
-if(file_exists(get_template_directory_uri().'/inc/common/init-plugins/init-constra-plugin.php')){
-    require_once(get_template_directory_uri().'/inc/common/init-plugins/init-constra-plugin.php');
+
+if ( file_exists( dirname(__FILE__) . '/inc/init-plugins/init-constra-plugin.php' ) ) {
+    require_once( dirname(__FILE__) . '/inc/init-plugins/init-constra-plugin.php' );
 }
+
 
 include_once('inc/common/scripts.php');
 include_once('inc/common/nav-walker.php');
