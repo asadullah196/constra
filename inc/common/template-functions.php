@@ -69,6 +69,17 @@ function constra_primary_menus(){
 function constra_widgets_init() {
 
 	// Sidebar widget
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Sidebar widgets area', 'constra' ),
+			'id'            => 'blog-sidebar',
+			'description'   => esc_html__( 'Add sidebar here.', 'constra' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+            'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		)
+	);
 
 	// All footer widgets
 	register_sidebar(
