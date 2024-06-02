@@ -16,9 +16,9 @@
 
     // Get info with ACF plugin
     $author_designation = function_exists('get_field') ? get_field('author_designation', 'user_' . $author_id) : null;
-    // $facebook_url = function_exists('get_field') ? get_field('facebook_url') : null;
-    $twitter_url = function_exists('get_field') ? get_field('twitter_url') : null;
-    $linkedin_url = function_exists('get_field') ? get_field('linkedin_url') : null;
+    $facebook_url = function_exists('get_field') ? get_field('author_facebook', 'user_' . $author_id) : null;
+    $twitter_url = function_exists('get_field') ? get_field('author_twitter', 'user_' . $author_id) : null;
+    $linkedin_url = function_exists('get_field') ? get_field('author_linkedin', 'user_' . $author_id) : null;
 
     $text = get_field('author_facebook');
 ?>
