@@ -1,22 +1,22 @@
 <?php 
 
 
-// wordpress comments form  start
+// wordpress commnets form  start
 function custom_comment_form_fields($fields) {
     $commenter = wp_get_current_commenter();
     $req = get_option('require_name_email');
 
     $fields = array(
-        'author' => '<div class="row"><div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6"><div  class="postbox__comment-input"><input type="text" name="author" id="author" placeholder="' . esc_attr__('Name*', 'harry') . '" value="' . esc_attr($commenter['comment_author']) . '" ' . ($req ? 'required' : '') . '></div>
+        'author' => '<div class="row"><div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6"><div  class="form-group"><input class="form-control" type="text" name="author" id="author" placeholder="' . esc_attr__('Name*', 'harry') . '" value="' . esc_attr($commenter['comment_author']) . '" ' . ($req ? 'required' : '') . '></div>
      </div>',
         'email' => '<div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6">
-        <div class="postbox__comment-input">
-           <input type="email" name="email" id="email" placeholder="' . esc_attr__('Email', 'harry') . '" value="' . esc_attr($commenter['comment_author_email']) . '" ' . ($req ? 'required' : '') . '>
+        <div class="form-group">
+           <input class="form-control" type="email" name="email" id="email" placeholder="' . esc_attr__('Email', 'harry') . '" value="' . esc_attr($commenter['comment_author_email']) . '" ' . ($req ? 'required' : '') . '>
         </div>
      </div>',
         'url' => '<div class="col-xxl-4 col-xl-4 col-lg-12">
-        <div class="postbox__comment-input">
-           <input type="text" name="url" id="url" placeholder="' . esc_attr__('Website', 'harry') . '" value="' . esc_attr($commenter['comment_author_url']) . '">
+        <div class="form-group">
+           <input class="form-control" type="text" name="url" id="url" placeholder="' . esc_attr__('Website', 'harry') . '" value="' . esc_attr($commenter['comment_author_url']) . '">
         </div>
      </div></div>',
     );
@@ -28,8 +28,8 @@ add_filter('comment_form_default_fields', 'custom_comment_form_fields');
 // Customize the comment form textarea
 function custom_comment_form_comment($comment_field) {
     $comment_field = '<div class="col-xxl-12">
-    <div class="postbox__comment-input">
-       <textarea id="comment" name="comment" placeholder="' . esc_attr__('Your Comment Here...', 'harry') . '" required></textarea>
+    <div class="form-group">
+       <textarea class="form-control required-field" id="comment" name="comment" placeholder="' . esc_attr__('Your Comment Here...', 'harry') . '" required></textarea>
     </div>
  </div>';
 
@@ -37,6 +37,8 @@ function custom_comment_form_comment($comment_field) {
 }
 
 add_filter('comment_form_field_comment', 'custom_comment_form_comment');
+
+
 
 
 // Move the comment textarea to the bottom
@@ -53,8 +55,8 @@ add_action('comment_form_fields', 'move_comment_textarea_to_bottom');
 
 // Customize the comment form checkbox
 function custom_comment_form_agree($fields) {
-    $fields['cookies'] = '<div class="col-xxl-12"><div class="postbox__comment-agree d-flex align-items-start mb-25">' .
-        '<input class="e-check-input" type="checkbox" id="e-agree" name="wp-comment-agree" value="1" checked>' .
+    $fields['cookies'] = '<div class="col-xxl-12"><div class="postbox__comment-agree align-items-start mb-25">' .
+        '<input class="e-check-input" type="checkbox" id="e-agree" name="wp-comment-agree" value="1" checked> ' .
         '<label class="e-check-label" for="e-agree">' . esc_html__('Save my name, email, and website in this browser for the next time I comment.', 'harry') . '</label></div></div>';
 
     return $fields;
@@ -66,7 +68,7 @@ add_filter('comment_form_fields', 'custom_comment_form_agree');
 function custom_comment_form_submit_button($submit_button) {
     $submit_button = '<div class="col-xxl-12">
     <div class="postbox__comment-btn">
-       <button type="submit" class="tp-btn">' . esc_html__('Submit Comment', 'harry') . '</button>
+       <button type="submit" class="btn btn-primary">' . esc_html__('Submit Comment', 'harry') . '</button>
     </div>
  </div>';
 
@@ -75,6 +77,8 @@ function custom_comment_form_submit_button($submit_button) {
 
 add_filter('comment_form_submit_button', 'custom_comment_form_submit_button');
 // comments for end 
+
+
 
 
 // custom_comment_list
