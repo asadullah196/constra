@@ -77,9 +77,12 @@
       </div><!-- Content Col end -->
 
       <div class="col-lg-4">
-
         <div class="sidebar sidebar-right">
-          <?php get_sidebar(); ?>
+          <?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
+              <?php get_sidebar(); ?>
+          <?php else : ?>
+              <h3>No Sidebar Added</h3>
+          <?php endif; ?>
         </div><!-- Sidebar end -->
       </div><!-- Sidebar Col end -->
 
