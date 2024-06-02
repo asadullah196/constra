@@ -21,8 +21,7 @@
   <div class="container">
     <div class="row">
       <!-- Main blog area starts -->
-      <div class="col-lg-1"></div>
-      <div class="col-lg-10 mb-5 mb-lg-0">
+      <div class="col-lg-12 mb-5 mb-lg-0">
         <?php if ( have_posts() ) : ?>
           <?php while( have_posts()  ) : the_post(); ?>
             <?php echo get_template_part( 'inc/template-parts/content-page'); ?>
@@ -33,7 +32,6 @@
         <?php constra_navigation(); ?>
         <!-- Blog pagination ends -->
       </div>
-      <div class="col-lg-1"></div>
       <!-- Main blog area starts -->
     </div><!-- Main row end -->
   </div><!-- Container end -->
