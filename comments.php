@@ -10,7 +10,7 @@ if (comments_open()) :
             <h2 class="postbox__comment-title">
                 <?php
                 $comment_count = get_comments_number();
-                echo esc_html($comment_count) . ' ' . _n('Comment', 'Comments', $comment_count, 'harry');
+                echo esc_html($comment_count) . ' ' . _n('Comment', 'Comments', $comment_count, 'constra');
                 ?>
             </h2>
 
@@ -26,8 +26,8 @@ if (comments_open()) :
             <?php
             // Display comment pagination if needed
             the_comments_pagination(array(
-                'prev_text' => esc_html__('Previous', 'harry'),
-                'next_text' => esc_html__('Next', 'harry'),
+                'prev_text' => esc_html__('Previous', 'constra'),
+                'next_text' => esc_html__('Next', 'constra'),
             ));
         endif;
 
