@@ -67,8 +67,10 @@
       <?php if ( have_posts() ) : ?>
         <?php while ( have_posts() ) : the_post(); ?>    
           <?php if ( comments_open() || get_comments_number() ) :
-              comments_template();
-          endif; ?>
+              comments_template();     
+          else : ?>
+            <h3 class="text-center">Comments has been disable!</h3>
+          <?php endif; ?>
         <?php endwhile; ?>
       <?php endif; ?>
 
