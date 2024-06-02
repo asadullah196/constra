@@ -15,7 +15,7 @@
     $author_bio = get_the_author_meta('description');
 
     // Get info with ACF plugin
-    // $author_designation = function_exists('get_field') ? get_field('designation_bd', $author_id) : null;
+    $author_designation = function_exists('get_field') ? get_field('author_designation', 'user_' . $author_id) : null;
     // $facebook_url = function_exists('get_field') ? get_field('facebook_url') : null;
     $twitter_url = function_exists('get_field') ? get_field('twitter_url') : null;
     $linkedin_url = function_exists('get_field') ? get_field('linkedin_url') : null;
@@ -30,7 +30,7 @@
         </a>
         </div>
         <div class="author-info">
-        <h3><?php echo esc_html($author_name, 'constra'); ?><span><?php var_dump(get_field('designation_bd', 'user_' . $author_id)); ?></span></h3>
+        <h3><?php echo esc_html($author_name, 'constra'); ?><span><?php echo esc_html__($author_designation, 'constra'); ?></span></h3>
         <p class="mb-2"><?php echo esc_html($author_bio); ?></p>
 
         <?php if(!empty($author_url)) : ?>
