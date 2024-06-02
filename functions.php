@@ -59,6 +59,11 @@ add_action('after_setup_theme','constra_theme_support');
 if( class_exists ( 'Kirki' ) ){
 	include_once('inc/common/kirki.php');
 }
+
+if(file_exists(get_template_directory_uri().'/inc/common/init-plugins/init-constra-plugin.php')){
+    require_once(get_template_directory_uri().'/inc/common/init-plugins/init-constra-plugin.php');
+}
+
 include_once('inc/common/scripts.php');
 include_once('inc/common/nav-walker.php');
 include_once('inc/common/breadcrumb.php');
