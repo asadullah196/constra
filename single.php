@@ -64,6 +64,15 @@
         <?php endwhile; ?>
       <?php endif; ?>
 
+      <?php if ( have_posts() ) : ?>
+        <?php while ( have_posts() ) : the_post(); ?>    
+          <?php if ( comments_open() || get_comments_number() ) :
+              comments_template();
+          endif; ?>
+        <?php endwhile; ?>
+      <?php endif; ?>
+
+      <?php /*
         <!-- Post comment start -->
         <div id="comments" class="comments-area">
           <h3 class="comments-heading">07 Comments</h3>
@@ -165,6 +174,8 @@
             </div>
           </form><!-- Form end -->
         </div><!-- Comments form end -->
+
+        */ ?>
       </div><!-- Content Col end -->
 
       <div class="col-lg-4">
