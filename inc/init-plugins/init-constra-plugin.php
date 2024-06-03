@@ -69,7 +69,7 @@ function constra_register_required_plugins() {
 		// This is an example of how to include a plugin from the WordPress Plugin Repository.
 		array(
 			'name'      => 'Kirki Customizer Framework',
-			'slug'      => 'plugins/kirki',
+			'slug'      => '/kirki',
 			'required'  => false,
 		),
 
